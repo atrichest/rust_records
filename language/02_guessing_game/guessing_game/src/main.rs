@@ -1,6 +1,8 @@
 use rand::Rng;
-use std::cmp::Ordering;
-use std::io;
+//Specifying a nested path to bring multiple items with the same prefix into scope
+use std::{cmp::Ordering,io}
+//use std::cmp::Ordering;
+//use std::io;
 
 fn main() {
     println!("Guess the number!");
