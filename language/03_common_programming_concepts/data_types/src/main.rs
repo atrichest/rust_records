@@ -66,6 +66,9 @@ fn numeric_operations() {
     //remainder
     let remainder = 43 % 5;
     println!("43%5={remainder}");
+    //results in -2
+    let truncated = -5 % 3;
+    println!("-5%3={}", truncated);
 }
 
 //Booleans are one byte in size
