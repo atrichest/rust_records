@@ -12,6 +12,12 @@ use minigrep::Config;
 //IGNORE_CASE=1 cargo run -- name poem.txt > output.log
 //PS> $Env:IGNORE_CASE=1; cargo run -- TO poem.txt > output.log
 //PS> Remove-Item Env:IGNORE_CASE
+//
+//14.4 run: cargo install minigrep
+//installed $HOME/.cargo/bin
+//
+// open new terminal
+//run: minigrep xxx infile
 fn main() {
     //reading a file
     // cargo run -- test poem.txt

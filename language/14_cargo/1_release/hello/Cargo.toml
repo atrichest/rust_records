@@ -1,0 +1,23 @@
+[package]
+name = "hello"
+version = "0.1.0"
+edition = "2021"
+
+# Cargo has two main profiles: dev and release
+## the dev profile Cargo uses when you run cargo build
+## the dev profile is defined with good defaults for development
+[profile.dev]
+# opt-level 决定编译器在构建代码时应用的优化级别。显著影响代码的编译时间和运行时性能
+## 0 无优化，profile.dev配置文件的默认配置
+## 1 少量优化，基础优化，在编译时间和运行性能之间找到一个平衡点
+## 2 默认优化，更激进的优化，对于大多数使用场景而言，这是一个很好的折中方案，同时考虑了编译时间和运行时性能
+## 3 强力优化，最大级别优化，这是 release 配置文件的默认设置，优先考虑运行时性能而非编译时间。
+## 当设置为3时，编译器可能会执行额外的操作，如函数内联、删除未使用的代码、循环展开等复杂优化，这些操作可以显著提升代码效率，但同时也会增加编译时间。
+## 虽然更高的优化级别可以带来更好的运行时性能，但也可能使调试变得更加困难，因为编译过程中会发生许多转换。因此，常见的做法是在开发阶段使用较低的优化级别，在准备发布时切换到较高的优化级别
+opt-level = 0
+## the release profile Cargo uses when you run cargo build --release
+## the release profile has good defaults for release builds
+[profile.release]
+opt-level = 3
+
+[dependencies]

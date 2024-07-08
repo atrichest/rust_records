@@ -1,0 +1,7 @@
+# cargo run -p adder
+[workspace]
+
+members = [
+    "adder",
+    "add_one", "add_two",
+]
